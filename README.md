@@ -1,7 +1,7 @@
 #Swift--一个好用的金融类游标卡尺
 > 思路：
 > 
-> 使用UICollectionView制作一个游标卡尺，每一个cell代表一个刻度区间，每个区间间隔值、区间分割份数和卡尺样式等都是可设置的。通过代理协议，监听卡尺的滚动值，设置卡尺的显示值等等。也可以设置默认最大可用金额，当用户滚动卡尺超过最大可用金额时自动回滚等（自己项目中使用到）。[github](https://github.com/SilongLi/ScrollRulerView)
+> 使用UICollectionView制作一个游标卡尺，每一个cell代表一个刻度区间，每个区间间隔值、区间分割份数和卡尺样式等都是可设置的。通过代理协议，监听卡尺的滚动值，设置卡尺的显示值等等。也可以设置默认最大可用金额，当用户滚动卡尺超过最大可用金额时自动回滚等（自己项目中使用到）。[简书](https://www.jianshu.com/p/61289c14ec34)
 > 
 > 
 
@@ -80,7 +80,7 @@ internal func scrollViewDidEndDragging(value: CGFloat)
 internal func scrollViewDidEndScrollingAnimation(value: CGFloat)
 ~~~
 
-[代码请移步github](https://github.com/SilongLi/ScrollRulerView)
+[简书](https://www.jianshu.com/p/61289c14ec34)
 
 
 
