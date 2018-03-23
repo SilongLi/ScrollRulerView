@@ -7,8 +7,8 @@
 
 ## 效果图
 
-![卡尺效果图1](http://chuantu.biz/t6/223/1517975829x-1404792915.png)
-![卡尺效果图2](http://chuantu.biz/t6/223/1517975853x-1404792915.png)
+![卡尺效果图1](http://upload-images.jianshu.io/upload_images/877439-cf1ea51440253eec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![卡尺效果图2](http://upload-images.jianshu.io/upload_images/877439-d7c2d80ee72c5afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 初始化方法如下：
 ~~~Swift
