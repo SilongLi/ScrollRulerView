@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		995AABF1209BF25F0009AD16 /* TDScrollRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AABF0209BF25F0009AD16 /* TDScrollRulerView.swift */; };
 		995B050C202ACCB100FCEF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995B050B202ACCB100FCEF43 /* AppDelegate.swift */; };
 		995B050E202ACCB100FCEF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995B050D202ACCB100FCEF43 /* ViewController.swift */; };
 		995B0511202ACCB100FCEF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995B050F202ACCB100FCEF43 /* Main.storyboard */; };
 		995B0513202ACCB100FCEF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995B0512202ACCB100FCEF43 /* Assets.xcassets */; };
 		995B0516202ACCB100FCEF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995B0514202ACCB100FCEF43 /* LaunchScreen.storyboard */; };
-		995B051F202ACCC600FCEF43 /* TDScrollRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995B051E202ACCC600FCEF43 /* TDScrollRulerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		995AABF0209BF25F0009AD16 /* TDScrollRulerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDScrollRulerView.swift; sourceTree = "<group>"; };
 		995B0508202ACCB100FCEF43 /* ScrollRulerViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollRulerViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995B050B202ACCB100FCEF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		995B050D202ACCB100FCEF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		995B0512202ACCB100FCEF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		995B0515202ACCB100FCEF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		995B0517202ACCB100FCEF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		995B051E202ACCC600FCEF43 /* TDScrollRulerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDScrollRulerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		995AABEF209BF25F0009AD16 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				995AABF0209BF25F0009AD16 /* TDScrollRulerView.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
 		995B04FF202ACCB100FCEF43 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +64,7 @@
 		995B050A202ACCB100FCEF43 /* ScrollRulerViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				995B051D202ACCC600FCEF43 /* Class */,
+				995AABEF209BF25F0009AD16 /* class */,
 				995B050B202ACCB100FCEF43 /* AppDelegate.swift */,
 				995B050D202ACCB100FCEF43 /* ViewController.swift */,
 				995B050F202ACCB100FCEF43 /* Main.storyboard */,
@@ -65,15 +73,6 @@
 				995B0517202ACCB100FCEF43 /* Info.plist */,
 			);
 			path = ScrollRulerViewDemo;
-			sourceTree = "<group>";
-		};
-		995B051D202ACCC600FCEF43 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				995B051E202ACCC600FCEF43 /* TDScrollRulerView.swift */,
-			);
-			name = Class;
-			path = ../../LSLScrollRulerViewDemo/LSLScrollRulerViewDemo/Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995B050E202ACCB100FCEF43 /* ViewController.swift in Sources */,
-				995B051F202ACCC600FCEF43 /* TDScrollRulerView.swift in Sources */,
+				995AABF1209BF25F0009AD16 /* TDScrollRulerView.swift in Sources */,
 				995B050C202ACCB100FCEF43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
