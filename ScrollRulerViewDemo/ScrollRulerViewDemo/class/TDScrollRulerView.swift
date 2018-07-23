@@ -102,7 +102,7 @@ class TDRulerView: UIView {
                     if num > 1000000 {
                         numStr = String(format: "%.2f万%@", num/10000, unit)
                     }
-                    let attribute:Dictionary = [NSAttributedStringKey.font:textRulerFont,NSAttributedStringKey.foregroundColor: strokeColor] as [NSAttributedStringKey : Any]
+                    let attribute:Dictionary = [NSAttributedString.Key.font:textRulerFont,NSAttributedString.Key.foregroundColor: strokeColor] as [NSAttributedString.Key : Any]
                     let width = numStr.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                                     attributes: attribute,context: nil).size.width
                     numStr.draw(in: CGRect.init(x: startX+lineCenterX*CGFloat(i)-width/2, y: textTopY, width: width, height: textHeight), withAttributes: attribute)
@@ -142,7 +142,7 @@ class TDFooterRulerView: UIView {
         if footerMaxValue > 1000000 {
             numStr = NSString(format: "%.2f万%@", footerMaxValue/10000,footerUnit)
         }
-        let attribute:Dictionary = [NSAttributedStringKey.font:textRulerFont,NSAttributedStringKey.foregroundColor:strokeColor] as [NSAttributedStringKey : Any]
+        let attribute:Dictionary = [NSAttributedString.Key.font:textRulerFont,NSAttributedString.Key.foregroundColor:strokeColor] as [NSAttributedString.Key : Any]
         let width = numStr.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude),
                                         options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                         attributes: attribute,context: nil).size.width
@@ -180,7 +180,7 @@ protocol TDScrollRulerDelegate: NSObjectProtocol {
 class TDScrollRulerView: UIView {
     private lazy var lazyCollectionView: UICollectionView = { [unowned self] in
         let flowLayout              = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection  = UICollectionViewScrollDirection.horizontal
+        flowLayout.scrollDirection  = UICollectionView.ScrollDirection.horizontal
         flowLayout.sectionInset     = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         let view = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: self.bounds.size.width, height: CGFloat(collectionHeight)), collectionViewLayout: flowLayout)
         view.backgroundColor    = .white
@@ -437,7 +437,7 @@ extension TDScrollRulerView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
