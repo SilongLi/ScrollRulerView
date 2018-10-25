@@ -31,6 +31,15 @@ class TDRulerView: UIView {
     var step: CGFloat = 0.0
     var betweenNumber = 0
     var strokeColor: UIColor = defaultColor
+    var startNum: CGFloat = 0.0 {   // 起点值
+        didSet {
+            var startNumStr = String(format: "%.0f%@", startNum, unit)
+            if startNum > 1000000 {
+                startNumStr = String(format: "%.2f万%@", startNum/10000, unit)
+            }
+            infoLabel.text = startNumStr
+        }
+    }
     
     lazy var infoLabel: UILabel = {
         let info        = UILabel()
@@ -79,8 +88,6 @@ class TDRulerView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        infoLabel.text = "0\(unit)"
-        
         let startX:CGFloat   = 0
         let lineCenterX      = CGFloat(rulerGap)
         let textTopY:CGFloat = rect.size.height - CGFloat(rulerLong) - 5.0 - textHeight
@@ -91,7 +98,7 @@ class TDRulerView: UIView {
             if i%betweenNumber == 0 {
                 let num = CGFloat(i)*step+minValue
                 let info: UILabel? = self.viewWithTag(667) as? UILabel
-                if num == 0.0 {
+                if num == startNum {
                     info?.isHidden = false
                 } else {
                     if i == 0 { // 表示cell的头部文案
@@ -331,6 +338,7 @@ extension TDScrollRulerView: UICollectionViewDataSource {
                 rulerView!.backgroundColor   = .white
                 rulerView!.step              = step
                 rulerView!.unit              = unit
+                rulerView?.startNum          = minValue
                 rulerView!.tag               = 1002
                 cell.contentView.addSubview(rulerView!)
                 

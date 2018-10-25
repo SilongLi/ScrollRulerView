@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         var rulerView = TDScrollRulerView(frame: CGRect(x: 0, y: Int(ScreenHeight/2), width: Int(ScreenWidth), height: 67),
                                           strokeColor: UIColor.lightGray,
                                           middleLineColor: .red,
-                                          min: 0.0,
+                                          min: 1000.0,
                                           max: 10000,
                                           numFontSize: 12,
-                                          endNum: 6666,
+                                          endNum: 150000,
                                           endText: "剩余金额",
                                           endTextColor: UIColor.orange,
                                           endtextFontSize: 11)
@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.addSubview(lazyRulerView)
-        lazyRulerView.reloadRulerView(min: 0.0, max: 10000, numFontSize: 12, endNum: 6666, endText: "剩余金额", endTextColor: UIColor.orange, endtextFontSize: 11)
+        lazyRulerView.reloadRulerView(min: 1000.0, max: 10000, numFontSize: 12, endNum: 5000.0, endText: "剩余金额", endTextColor: UIColor.orange, endtextFontSize: 11)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lazyRulerView.scrollToEndNumber(endN: 6666)
+        lazyRulerView.scrollToEndNumber(endN: 1000.0)
     }
 }
 
@@ -53,8 +53,8 @@ extension ViewController: TDScrollRulerDelegate {
     
     func scrollViewDidEndDragging(value: CGFloat) {
         print("滑动的值end------->"+"\(value)")
-        if value > 6666 {
-            lazyRulerView.scrollToEndNumber(endN: 6666)
+        if value > 1000.0 {
+            lazyRulerView.scrollToEndNumber(endN: 1000.0)
         }
     }
 }
